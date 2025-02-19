@@ -1,0 +1,32 @@
+🔥🔥🔥 Tạo hoặc Mở Project
+🔹 Cách 1: Tạo mới một Project
+Mở VS Code.
+Chọn File → Open Folder… (hoặc nhấn Ctrl + K + O).
+Chọn thư mục muốn làm project hoặc tạo thư mục mới.
+Bấm Select Folder.
+🔹 Cách 2: Clone một Project từ GitHub
+Mở VS Code.
+Chọn View → Command Palette… (hoặc Ctrl + Shift + P).
+Gõ "Git: Clone" → Nhập URL repo GitHub.
+Chọn thư mục lưu trữ project.
+
+1️⃣ Kiểm tra số lượng commit trong lịch sử:
+git log --oneline
+2️⃣ Reset lại về commit đầu tiên nhưng vẫn giữ code:
+git reset --soft $(git rev-list --max-parents=0 HEAD)
+3️⃣ Tạo commit mới để thay thế toàn bộ lịch sử:
+git commit -m "Giữ lại chỉ commit cuối cùng"
+4️⃣ Push lại nhánh lên GitHub/GitLab (nếu cần):
+git push origin main --force
+
+
+🔥🔥🔥 https://github.com/phamquanghien/JavaOOP
+Hiển thị tất cả các nhánh: git branch -a
+Tạo nhánh mới: git checkout -b BRANCH_NAME, git push -u origin BRANCH_NAME
+Cập nhật thay đổi mã nguồn lên github: git add ., git commit -m COMMIT_NOTE, git push
+Đồng bộ mã nguồn từ nhánh "Test" vào nhánh "main": cần chuyển sang nhánh "main" và chạy lệnh "git merge Test"
+Hiển thị danh sách các commit: git log --oneline
+Khôi phục mã nguồn tại thời điểm bất kỳ (không giữ lại các thay đổi): git reset --hard COMMIT_ID
+Khôi phục mã nguồn tại thời điểm bất kỳ (giữ lại các thay đổi): git reset --soft HEAD~SoLuongCommit
+Xoá nhánh trên local: git branch -d BRANCH_NAME
+Xoá nhánh trên remote (github): git push origin --delete BRANCH_NAME
